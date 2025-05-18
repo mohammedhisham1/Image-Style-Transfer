@@ -17,15 +17,9 @@ from diffusers.pipelines.stable_diffusion import StableDiffusionSafetyChecker
 
 class StyleTransfer:
     def __init__(self, model_id="runwayml/stable-diffusion-v1-5", device=None):
-        """Initialize the style transfer class with the given model.
-        
-        Args:
-            model_id (str): The model ID to use for style transfer
-            device (str): The device to use for inference (cuda or cpu)
-        """
+
         self.model_id = model_id
         
-        # Determine device
         if device is None:
             self.device = "cuda" if torch.cuda.is_available() else "cpu"
         else:
@@ -36,7 +30,7 @@ class StyleTransfer:
         # Load pipeline
         self.pipe = StableDiffusionImg2ImgPipeline.from_pretrained(
             model_id,
-            torch_dtype=torch.float16 if self.device == "cuda" else torch.float32,
+            torch_dtype=torch.float16,
         )
         # Use DDIM scheduler for better results
         self.pipe.scheduler = DDIMScheduler.from_config(self.pipe.scheduler.config)
