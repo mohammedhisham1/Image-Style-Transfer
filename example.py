@@ -93,7 +93,7 @@ def main():
         
         # Load images
         content_image = load_image("samples/city.jpg")
-        style_image = load_image("samples/comic.jpg")
+        style_image = load_image("samples/vangogh.jpg")
         
         # Generate variations
         variations = transfer.create_style_variations(

@@ -10,6 +10,7 @@ This project implements image style transfer using Stable Diffusion, allowing yo
 - Blend multiple reference styles
 - Automatic style feature extraction from reference images
 - Interactive visualization of results
+- Streamlit web interface for easy use
 
 ## Installation
 
@@ -35,6 +36,34 @@ python download_samples.py
 This will create a `samples` directory with various content and style reference images.
 
 ## Usage
+
+### Web Interface (Streamlit App)
+
+The easiest way to use the style transfer tool is through the Streamlit web interface:
+
+#### Windows:
+```bash
+run_app.bat
+```
+
+#### Linux/Mac:
+```bash
+chmod +x run_app.sh
+./run_app.sh
+```
+
+Or directly with:
+```bash
+streamlit run app.py
+```
+
+This will launch a web application in your browser with the following features:
+- Basic style transfer using a reference image
+- Text-guided style transfer
+- Generate multiple style variations
+- Blend multiple styles
+- Adjustable parameters (strength, guidance scale, steps)
+- Download of generated images
 
 ### Quick Example
 
