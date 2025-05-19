@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# Streamlit app for Image Style Transfer
-
 import os
 import time
 import streamlit as st
