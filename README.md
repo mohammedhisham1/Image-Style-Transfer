@@ -16,7 +16,7 @@ This project implements image style transfer using Stable Diffusion, allowing yo
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/stable-diffusion-style-transfer.git
+git clone https://github.com/mohammedhisham1/Image-Style-Transfer.git
 cd stable-diffusion-style-transfer
 ```
 
